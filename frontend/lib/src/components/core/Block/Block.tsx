@@ -43,7 +43,7 @@ import { useEmotionTheme } from "~lib/hooks/useEmotionTheme"
 import {
   FlexContext,
   FlexContextProvider,
-} from "src/components/core/Layout/FlexContext"
+} from "~lib/components/core/Layout/FlexContext"
 
 import {
   assignDividerColor,
@@ -244,7 +244,6 @@ const BlockNodeRenderer = (props: BlockPropsWithoutWidth): ReactElement => {
     subElement:
       (node.deltaBlock.type && node.deltaBlock[node.deltaBlock.type]) ||
       undefined,
-    isFlexContainer: checkFlexContainerBackwardsCompatibile(node.deltaBlock),
   })
 
   if (node.isEmpty && !node.deltaBlock.allowEmpty) {
